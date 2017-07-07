@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pixel to EM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="manifest.json">
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="img/icon.png">
+        <meta name="theme-color" content="#311b92">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Shopping">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="apple-touch-icon-precomposed" href="img/icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/icon.png">
+        <meta name="msapplication-TileColor" content="#311b92">
+        
+        <link type="text/css" rel="stylesheet" href="assets/css/vendor/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="assets/css/vendor/waves.css">
+        <link type="text/css" rel="stylesheet" href="assets/icons/material.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">link1</a></li>
+                    <li><a href="#">link2</a></li>
+                    <li><a href="#">link3</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#">link1</a></li>
+                    <li><a href="#">link2</a></li>
+                    <li><a href="#">link3</a></li>
+                </ul>
+                </div>
+                <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="active" href="#index">To convert</a></li>
+                    <!--<li class="tab"><a href="#value_converted">Converted</a></li>-->
+                    <li class="tab"><a href="#default_size">Default size</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <section>
+                <div class="row">
+                    <div id="index" class="">
+                        <form action="post" class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Placeholder" id="base" type="number"  value="16" class="validate">
+                                    <label for="base">Enter a base pixel size</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Placeholder" id="value" type="number" class="validate">
+                                    <label for="value">Enter the value</label>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                <select name="" id="" class="input-field col s12">
+                                    <option value="" disabled selected>Select the option</option>
+                                    <optgroup label="Pixel to">
+                                        <option value="0">EM's</option>
+                                        <option value="1">Percent</option>
+                                        <option value="2">Points</option>
+                                    </optgroup>
+                                    <optgroup label="Em to">
+                                        <option value="3">Pixel</option>
+                                        <option value="4">Percent</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </form>
+                        <!--<div class="input-field col 6">
+                            <button id="converter" class="btn waves-effect waves-light" type="submit" name="action">Convert
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                        <div class="input-field col s6">
+                            <button id="clear" class="btn waves-effect waves-light" type="submit" name="action">Clear
+                                <i class="material-icons left">clear_all</i>
+                            </button>
+                        </div>-->
+                    </div>
+                </div>
+                 
+                <div id="default_size" class="section scrollspy">
+                    <h4>Default value of your body font size</h4>
+                    <div class="row">
+                        <div class="col s12">
+                            <p>Conversions based on 16px browser default size</p>
+                            <table class="centered striped bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Pixels</th>
+                                        <th>EM's</th>
+                                        <th>Percent</th>
+                                        <th>Points</th>
+                                    </tr>
+                                </thead>
+                                <tbody><tr><td>6px</td><td>0.375em</td><td>37.5%</td><td>5pt</td></tr><tr class="even"><td>7px</td><td>0.438em</td><td>43.8%</td><td>5pt</td></tr><tr class="odd"><td>8px</td><td>0.500em</td><td>50.0%</td><td>6pt</td></tr><tr class="even"><td>9px</td><td>0.563em</td><td>56.3%</td><td>7pt</td></tr><tr class="odd"><td>10px</td><td>0.625em</td><td>62.5%</td><td>8pt</td></tr><tr class="even"><td>11px</td><td>0.688em</td><td>68.8%</td><td>8pt</td></tr><tr class="odd"><td>12px</td><td>0.750em</td><td>75.0%</td><td>9pt</td></tr><tr class="even"><td>13px</td><td>0.813em</td><td>81.3%</td><td>10pt</td></tr><tr class="odd"><td>14px</td><td>0.875em</td><td>87.5%</td><td>11pt</td></tr><tr class="even"><td>15px</td><td>0.938em</td><td>93.8%</td><td>11pt</td></tr><tr class="odd selected base"><td>16px</td><td>1.000em</td><td>100.0%</td><td>12pt</td></tr><tr class="even"><td>17px</td><td>1.063em</td><td>106.3%</td><td>13pt</td></tr><tr class="odd"><td>18px</td><td>1.125em</td><td>112.5%</td><td>14pt</td></tr><tr class="even"><td>19px</td><td>1.188em</td><td>118.8%</td><td>14pt</td></tr><tr class="odd"><td>20px</td><td>1.250em</td><td>125.0%</td><td>15pt</td></tr><tr class="even"><td>21px</td><td>1.313em</td><td>131.3%</td><td>16pt</td></tr><tr class="odd"><td>22px</td><td>1.375em</td><td>137.5%</td><td>17pt</td></tr><tr class="even"><td>23px</td><td>1.438em</td><td>143.8%</td><td>17pt</td></tr><tr class="odd"><td>24px</td><td>1.500em</td><td>150.0%</td><td>18pt</td></tr></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--<div id="value_converted" class="section scrollspy">
+                    <h4>Values Converted</h4>
+                    <div class="row">
+                        <div class="col s12">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>-->
+            </section>
+        </div>
+
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/materialize.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/waves.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+               $('select').material_select();
+               // $('select').material_select('destroy');
+            });
+            $(document).ready(function() {
+                Materialize.updateTextFields();
+            });
+            $(".button-collapse").sideNav();
+        </script>
+    </body>
+</html>
