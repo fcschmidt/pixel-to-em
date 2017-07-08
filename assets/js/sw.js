@@ -10,10 +10,12 @@ self.addEventListener('install', function(e) {
         caches.open(cacheName).then(function(cache) {
             // Define  what we want to cache
             return cache.addAll([
+                '/',
                 "index.html",
                 "manifest.json",
                 "assets/css/main.cs",
                 "assets/js/main.js",
+                "assets/js/install.js",
                 "assets/image/icons/launcher-icon.png",
                 "assets/image/icons/launcher-icon-96.png",
                 "assets/image/icons/launcher-icon-144.png",
@@ -48,4 +50,9 @@ self.addEventListener('fetch', function(event) {
             return fetch(event.request);
         })
     );
+});
+
+self.addEventListener('notificationclick', function(event) {
+  console.log('On notification click: ', event);
+  clients.openWindow('/');
 });
