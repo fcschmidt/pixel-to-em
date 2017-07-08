@@ -9,6 +9,9 @@ self.addEventListener('install', function(event) {
             return cache.addAll([
                 '/',
                 'index.html',
+                'offline.html',
+                'calc.htmk',
+                'featured.html',
                 'manifest.json',
                 'assets/images/icons/favicon.opng',
                 'assets/css/main.css',
@@ -27,7 +30,6 @@ self.addEventListener('install', function(event) {
                 'assets/vendor/waves/css/waves.min.css',
                 'assets/vendor/waves/js/waves.min.js',
                 'assets/vendor/jquery/jquery.min.js'
-                // '/offline.html'
             ]);
         })
     );
@@ -43,6 +45,6 @@ self.addEventListener('fetch', function(event) {
         });
         return response.clone();
     }).catch(function() {
-        return caches.match('/assets/images/myLittleVader.jpg');
+        return caches.match('offline.html');
     }));
 });
