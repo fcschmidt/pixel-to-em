@@ -10,7 +10,7 @@ self.addEventListener('install', function(event) {
                 '/',
                 'index.html',
                 'offline.html',
-                'calc.htmk',
+                'calc.html',
                 'featured.html',
                 'manifest.json',
                 'assets/images/icons/favicon.opng',
