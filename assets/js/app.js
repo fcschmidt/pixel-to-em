@@ -1,7 +1,7 @@
 // Register the service worker
 if ('serviceWorker' in navigator) {
 
-    navigator.serviceWorker.register('/assets/js/sw.js')
+    navigator.serviceWorker.register('assets/js/sw.js')
     .then(function(reg) {
 
         if(reg.installing) {
