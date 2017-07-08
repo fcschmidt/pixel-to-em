@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Featured</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Pixel to EM"/>
+        <link rel="manifest" href="manifest.json">
+         <link rel="canonical" href="https://fcschmidt.me/pixel-to-em/">
+        <!-- Add to Home Screen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="img/icon.png">
+        <meta name="theme-color" content="#263238">
+        <!-- Add to Home Screen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Pixel to EM">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="apple-touch-icon-precomposed" href="img/icon.png">
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/icon.png">
+        <meta name="msapplication-TileColor" content="#263238">
+        <link type="text/css" rel="stylesheet" href="assets/vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="assets/vendor/materialize/icons/material.css">
+        <link type="text/css" rel="stylesheet" href="assets/vendor/waves/css/waves.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+
+        <main class="featured">
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                    <h4 class="brand-logo">Featured</h4>
+                    <a href="index.html"><i class="material-icons waves-effect waves-light waves-circle">arrow_back</i></a>
+                </div>
+            </nav>
+        </main>
+
+
+
+        <script type="text/javascript" src="assets/vendor/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/vendor/materialize/js/materialize.min.js"></script>
+        <script type="text/javascript" src="assets/vendor/waves/js/waves.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="/assets/js/app.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+               $('select').material_select();
+               // $('select').material_select('destroy');
+            });
+            $(document).ready(function() {
+                Materialize.updateTextFields();
+            });
+            $(".button-collapse").sideNav();
+            $(document).ready(function(){
+                $('ul.tabs').tabs('select_tab', 'tab_id');
+            });
+        </script>
+    </body>
+</html>
