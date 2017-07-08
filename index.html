@@ -6,19 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="application-name" content="Pixel to EM"/>
         <link rel="manifest" href="manifest.json">
-         <link rel="canonical" href="https://fcschmidt.me/pixel-to-em/">
+        <link rel="canonical" href="https://fcschmidt.me/pixel-to-em/">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/images/icons/favicon.png"/>
         <!-- Add to Home Screen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="192x192" href="img/icon.png">
+        <link rel="icon" sizes="192x192" href="/assets/images/icons/img/icon-192.png">
         <meta name="theme-color" content="#263238">
         <!-- Add to Home Screen for Safari on iOS -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-title" content="Pixel to EM">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="apple-touch-icon-precomposed" href="img/icon.png">
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="img/icon.png">
-        <meta name="msapplication-TileColor" content="#263238">
+        <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/icon-144.png">
         <link type="text/css" rel="stylesheet" href="assets/vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="assets/vendor/materialize/icons/material.css">
         <link type="text/css" rel="stylesheet" href="assets/vendor/waves/css/waves.min.css">
@@ -26,48 +24,50 @@
         <link type="text/css" rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
-       
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Pixel to EM</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="#" class="right hide-on-med-and-down">
-                    <li><a href="#"><i class="fa fa-github"></i> Source Code</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <a href="#" class="logo">Pixel to EM</a>
-                    <!--<li><a class="fa fa-github" href="#"> Source Code</a></li>-->
-                    <!--<li><a class="fa fa-twitter" href="#">@fcschmidt</a></li>-->
-                </ul>
-            </div>
-            <div class="nav-content">
-                <ul class="tabs tabs-fixed-width tabs-transparent">
-                    <li class="tab"><a class="active " href="#index">To convert</a></li>
-                    <li class="tab"><a class="" href="#default_size">Default size</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container">
-            <section>
-                <div id="index">
+    
+        <main class="index">
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                    <h4 class="brand-logo">Pixel to EM</h4>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul id="#" class="right hide-on-med-and-down">
+                        <li><a href="#"><i class="fa fa-github"></i> Source Code</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <h4 class="logo">Pixel to EM</h4>
+                        <!--<li class="subtitle">About the App</li>-->
+                        <li><a href="calc.html">Calculation Method</a></li>
+                        <li><a href="featured.html">Featured</a></li>
+                        <!--<li><a class="fa fa-github" href="#"> Source Code</a></li>-->
+                        <!--<li><a class="fa fa-twitter" href="#">@fcschmidt</a></li>-->
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#index">To convert</a></li>
+                        <li class="tab"><a href="#default_size">Default size</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div id="index" class="content">
                     <div class="row">
                         <form action="" class="col s12">
                             <div class="input-field col s12">
                                 <select name="" id="">
                                     <option value="" disabled selected>Select the option</option>
-                                    <optgroup label="Pixel to">
+                                    <optgroup label="Pixel to:">
                                         <option value="0">EM's</option>
                                         <option value="1">Percent</option>
                                         <option value="2">Points</option>
                                     </optgroup>
-                                    <optgroup label="EM to">
+                                    <optgroup label="EM to:">
                                         <option value="3">Pixel</option>
                                         <option value="4">Percent</option>
                                     </optgroup>
                                 </select>
                                 <label>Select the type of conversion</label>
                             </div>
-
 
                             <div class="input-field col s6">
                                 <input placeholder="Placeholder" id="base" type="number"  value="16" class="validate">
@@ -100,13 +100,14 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </main>
 
-        <script type="text/javascript" src="assets/js/vendor/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/vendor/materialize/js/materialize.min.js"></script>
-        <script type="text/javascript" src="assets/vendor/waves/js/waves.min.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="/assets/vendor/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/vendor/materialize/js/materialize.min.js"></script>
+        <script type="text/javascript" src="/assets/vendor/waves/js/waves.min.js"></script>
+        <script type="text/javascript" src="/assets/js/main.js"></script>
+        <script type="text/javascript" src="/assets/js/app.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                $('select').material_select();
