@@ -36,15 +36,29 @@ self.addEventListener('install', function(event) {
 });
 
 
+// self.addEventListener('fetch', function(event) {
+//     event.respondWith(caches.match(event.request).catch(function() {
+//         return fetch(event.request);
+//     }).then(function(response) {
+//         caches.open(cacheName).then(function(cache) {
+//             cache.put(event.request, response);
+//         });
+//         return response.clone();
+//     }).catch(function() {
+//         return caches.match('offline.html');
+//     }));
+// });
+
+
 self.addEventListener('fetch', function(event) {
-    event.respondWith(caches.match(event.request).catch(function() {
-        return fetch(event.request);
-    }).then(function(response) {
-        caches.open(cacheName).then(function(cache) {
-            cache.put(event.request, response);
-        });
-        return response.clone();
-    }).catch(function() {
-        return caches.match('offline.html');
-    }));
+
+  event.respondWith(
+    // Look for something in the cache that matches the request
+    caches.match(event.request).then(function(response) {
+
+      // If we find something, return it
+      // Otherwise, use the network instead
+      return response || fetch(event.request);
+    })
+  );
 });
