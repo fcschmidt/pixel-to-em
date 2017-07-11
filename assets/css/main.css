@@ -33,8 +33,12 @@ body {
     background-color: #263238;
 }
 .nav-extended .nav-wrapper .brand-logo{
-    padding-top: -.5em;
-    font-size: 1.7rem;
+    padding-top: .1em;
+    font-size: 1.5rem;
+}
+.calc .nav-extended .nav-wrapper .brand-logo,
+.featured .nav-extended .nav-wrapper .brand-logo{
+    font-size: 1.3rem;
 }
 .nav-extended .nav-wrapper .side-nav{
     background-color: #f1f1f1;
@@ -54,6 +58,9 @@ body {
     padding: .3em;
     font-size: 1.2rem;
     color: #263238;
+}
+.nav-extended .nav-wrapper a i{
+    padding-left: .5em;
 }
 
 /* Index
@@ -116,6 +123,19 @@ body {
 
 /* Calculation
 -----------------------------------------------------*/
+.calc .container .content{
+    /*margin: 0 -.5em*/
+}
+.calc .container .content section ul li{
+    margin-bottom: 1em;
+}
+.calc .container .content section span{
+    padding: .2em .3em;
+    font-weight: 600;
+    color: #fff;
+    background-color: #9f9f9f;
+    border-radius: 3px;
+}
 
 /* Featured
 -----------------------------------------------------*/
