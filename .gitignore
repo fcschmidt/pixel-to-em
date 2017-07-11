@@ -1,3 +1,6 @@
 .idea/
+.vscode/
+assets/js/sw.js
 testes.html
 teste2.html
+service-worker.js
