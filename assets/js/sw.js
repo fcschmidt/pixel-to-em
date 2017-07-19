@@ -29,7 +29,9 @@ self.addEventListener('install', function(event) {
                 'assets/vendor/waves/css/waves.min.css',
                 'assets/vendor/waves/js/waves.min.js',
                 'assets/vendor/jquery/jquery.min.js'
-            ]);
+            ]).then(function () {
+                self.skipWaiting();
+            });
         })
     );
 });

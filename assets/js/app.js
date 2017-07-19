@@ -1,6 +1,8 @@
 // Register the service worker
+// Offline Tests
+// if ('serviceWorker' in navigator && (window.location.protocol == 'https:' || window.location.hostname === 'localhost')) {
 if ('serviceWorker' in navigator) {
-  
+
     navigator.serviceWorker.register('service-worker.js',{
         scope: './'
     }).then(function(reg) {
@@ -9,11 +11,9 @@ if ('serviceWorker' in navigator) {
         } else if(reg.waiting) {
             console.log('Service worker installed!');
         } else if(reg.active) {
-            console.log('Service worker active!');
+            console.log('Service worker active!', reg);
         }
     }).catch(function(error) {
         console.log('Registration failed with ' + error);
     });
-} else {
-    console.log("Your browser does not supports serviceWorker!");
 }
