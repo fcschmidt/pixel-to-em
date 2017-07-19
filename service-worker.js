@@ -1,63 +1,61 @@
-var cacheName = 'v1';
+var CACHE_NAME = 'v1';
+
 
 self.addEventListener('install', function(event) {
+    console.log('[install] kicking off service worker registration!');
     event.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            return cache.addAll([
-                '/',
-                'index.html',
-                'offline.html',
-                'calc.html',
-                'featured.html',
-                'manifest.json',
-                'assets/css/main.css',
-                'assets/js/main.js',
-                'assets/js/app.js',
-                'assets/images/icons/favicon.png',
-                'assets/images/icons/icon-48.png',
-                'assets/images/icons/icon-144.png',
-                'assets/images/icons/icon-192.png',
-                'assets/vendor/materialize/css/materialize.min.css',
-                'assets/vendor/materialize/js/materialize.min.js',
-                'assets/vendor/materialize/icons/material.css',
-                'assets/vendor/materialize/icons/MaterialIcons-Regular.ttf',
-                'assets/vendor/font-awesome/css/font-awesome.min.css',
-                'assets/vendor/waves/css/waves.min.css',
-                'assets/vendor/waves/js/waves.min.js',
-                'assets/vendor/jquery/jquery.min.js'
-            ]);
+        caches.open(CACHE_NAME).then(function(cache) {
+            return fetch('files-to-cache.json').then(function(response){
+                return response.json();
+            }).then(function(files){
+                console.log('[install] Adding files from JSON file: ', files);
+                return cache.addAll(files);
+            });
+        }).then(function () {
+            console.log(
+                '[install] All required resources have been cached;',
+                'the Service Worker was successfully installed!'
+            );
+            self.skipWaiting();
         })
     );
 });
 
 
 self.addEventListener('fetch', function(event){
-    event.respondWith(
-        caches.match(event.request).then(function(response){
-            return response || fetch(event.request).then(function(response){
-                return caches.open(cacheName).then(function(cache){
-                    cache.put(event.request, response.clone());
-                    return response;
-                });
-            });
-        }).catch(function(){
-            return caches.match('offline.html');
-        })
-    );
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response){
+        // Cache hit - return the response from the cached version
+        if (response){
+          console.log(
+            '[fetch] Returning from Service Worker cache: ',
+            event.request.url
+          );
+          return response;
+        }
+
+        // Not in cache - return the result from the live server
+        // `fetch` is essentially a "fallback"
+        console.log('[fetch] Returning from server: ', event.request.url);
+        return fetch(event.request);
+      }
+    )
+  );
 });
 
 
-self.addEventListener('active', function(event){
-    var cachWhitelist = ['v2'];
-
+self.addEventListener('activate', function(event){
+    console.log('[activate] Activating service worker!');
     event.waitUntil(
-        caches.keys().then(function(keyList){
-            return Promise.all(keyList.map(function(key){
-                if (cacheWhitelist.indexOf(key) === -1){
-                    console.log('[SW] Delete cache:', cacheName);
-                    return caches.delete(key);
-                }
-            }));
+        caches.keys().then(function(cacheNames){
+            return Promise.all(
+                cacheNames.map(function(cacheName){
+                    if (CACHE_NAME.indexOf(cacheName) == -1){
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
         })
     );
 });
