@@ -91,6 +91,9 @@ body {
 
 /* Index
 -----------------------------------------------------*/
+#index{
+    margin: 0 -.4em;
+}
 #index form{
     margin-bottom: 1em;
 }
@@ -184,7 +187,7 @@ body {
 /* Calculation
 -----------------------------------------------------*/
 .calc .container .content{
-    margin: -4em -.5em;
+    margin: -4em -.4em;
 }
 .calc .container .content section ul{
     padding: 0 .5em;
