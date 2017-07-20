@@ -1,10 +1,10 @@
 // Register the service worker
 // Offline Tests
-if ('serviceWorker' in navigator && (window.location.protocol == 'https:' || window.location.hostname === 'localhost')) {
-// if ('serviceWorker' in navigator) {
+// if ('serviceWorker' in navigator && (window.location.protocol == 'https:' || window.location.hostname === 'localhost')) {
+if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker.register('service-worker.js',{
-        scope: './'
+        scope: ''
     }).then(function(reg) {
         if(reg.installing) {
             console.log('Service worker installing!');
