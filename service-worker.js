@@ -16,7 +16,7 @@ self.addEventListener('install', function(event) {
                 '[install] All required resources have been cached;',
                 'the Service Worker was successfully installed!'
             );
-            return self.skipWaiting();
+            self.skipWaiting();
         })
     );
 });
