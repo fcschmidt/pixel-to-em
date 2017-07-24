@@ -1,148 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Calculation method</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="application-name" content="Pixel to EM"/>
-        <link rel="canonical" href="https://fcschmidt.me/pixel-to-em/calc.html">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/images/icons/favicon.png"/>
-        
-        <link rel="manifest" href="manifest.json">
-        <meta name="theme-color" content="#263238">
+---
+layout: default
+title: Calculation method
+---
 
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="Pixel to EM">  
-        <link rel="icon" sizes="192x192" href="assets/images/icons/icon-192.png">
-       
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="apple-mobile-web-app-title" content="Pixel to EM">
 
-        <link rel="apple-touch-icon" sizes="48x48" href="assets/images/icons/">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/">
-        <link rel="apple-touch-icon" sizes="96x96" href="assets/images/icons/">
-        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/icon-144.png">
-        <link rel="apple-touch-icon" sizes="192x192" href="assets/images/icons/">
-
-        <link type="text/css" rel="stylesheet" href="assets/vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="assets/vendor/materialize/icons/material.css">
-        <link type="text/css" rel="stylesheet" href="assets/vendor/waves/css/waves.min.css">
-        <link type="text/css" rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-        <link type="text/css" rel="stylesheet" href="assets/css/main.css">
-
-        <script type="text/javascript">
-            var host = "fcschmidt.me/pixel-to-em";
-            if ((host == window.location.host) && (window.location.protocol != "https://"))
-                window.location.protocol = "https";
-        </script>
-    </head>
-    <body>
-        <div class="desk">
-            <h3>Desktop version!!!</h3>
+<main class="calc">
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <h4 class="brand-logo">Calculation method</h4>
+            <a href="/"><i class="material-icons">arrow_back</i></a>
         </div>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <section class="col s12">
+                    <h5>Calculation Method</h5>
+                    <p>
+                        Conversions based on 16px browser default size.<br>
+                        16px is used as text size of the body in all conversions. 
+                        This is the default value browser. You can change this value for 
+                        the size you used as the basis.
+                    </p>
+                    
+                    <ul>
+                        <h5>Pixel to:</h5>
+                        <li>
+                            <strong><u>EM's:</u></strong><br>
+                            <b>Formula:</b> input value / pixel base.<br>
+                            <b>Example:</b> <span>16px / 16px = 1em</span>
+                        </li>
+                        <li>
+                            <strong><u>Percent %:</u></strong><br>
+                            <b>Formula:</b> (input value / pixel base) * 100.<br>
+                            <b>Example:</b> <span>(16px/16px )* 100 = 100%</span>
+                        </li>
+                        <li>
+                            <strong><u>Points:</u></strong><br>
+                            <b>Formula:</b> input value * (dots per inch / pixel per inch).<br>
+                            <b>Example:</b> <span>16px * (72px/96px) = 12pt</span>
+                        </li>
 
-        <main class="calc">
-            <nav class="nav-extended">
-                <div class="nav-wrapper">
-                    <h4 class="brand-logo">Calculation method</h4>
-                    <a href="https://fcschmidt.me/pixel-to-em/"><i class="material-icons">arrow_back</i></a>
-                </div>
-            </nav>
-            <div class="container">
-                <div class="content">
-                    <div class="row">
-                        <section class="col s12">
-                            <h5>Calculation Method</h5>
-                            <p>
-                               Conversions based on 16px browser default size.<br>
-                               16px is used as text size of the body in all conversions. 
-                               This is the default value browser. You can change this value for 
-                               the size you used as the basis.
-                            </p>
-                            
-                            <ul>
-                                <h5>Pixel to:</h5>
-                                <li>
-                                    <strong><u>EM's:</u></strong><br>
-                                    <b>Formula:</b> input value / pixel base.<br>
-                                    <b>Example:</b> <span>16px / 16px = 1em</span>
-                                </li>
-                                <li>
-                                    <strong><u>Percent %:</u></strong><br>
-                                    <b>Formula:</b> (input value / pixel base) * 100.<br>
-                                    <b>Example:</b> <span>(16px/16px )* 100 = 100%</span>
-                                </li>
-                                <li>
-                                    <strong><u>Points:</u></strong><br>
-                                    <b>Formula:</b> input value * (dots per inch / pixel per inch).<br>
-                                    <b>Example:</b> <span>16px * (72px/96px) = 12pt</span>
-                                </li>
-        
-                            </ul>
-                            <ul>
-                                <h5>EM's to:</h5>
-                                <li>
-                                    <strong><u>Pixel:</u></strong><br>
-                                    <b>Formula:</b> input value * pixel base.<br>
-                                    <b>Example:</b> <span>1em * 16px = 16px</span>
-                                </li>
-                                <li>
-                                    <strong><u>Percent %:</u></strong><br>
-                                    <b>Formula:</b> input value * 100.<br>
-                                    <b>Example:</b> <span>1em * 100% = 100%</span>
-                                </li>
-                                <li>
-                                    <strong><u>Points:</u></strong><br>
-                                    <b>Formula:</b> (dots per inch / pixel per inch) / input value * pixel base.<br>
-                                    <b>Example:</b> <span>(72px/96px) / 1em * 16px = 12pt</span>
-                                </li>
-                            </ul>
-                            <ul>
-                                <h5>Percent to:</h5>
-                                <li>
-                                    <strong><u>Pixel:</u></strong><br>
-                                    <b>Formula:</b> (input value * pixel base) / 100.<br>
-                                    <b>Example:</b> <span>(100% * 16px) / 100 = 16px</span>
-                                </li>
-                                <li>
-                                    <strong><u>EM's:</u></strong><br>
-                                    <b>Formula:</b> input value / 100.<br>
-                                    <b>Example:</b> <span>100% / 100 = 1em</span>
-                                </li>
-                                <li>
-                                    <strong><u>Points:</u></strong><br>
-                                    <b>Formula:</b> ((dots per inch / pixel per inch) * input value) * pixel base / 100.<br>
-                                    <b>Example:</b> <span>((72px/96px) * 100%) * 16px / 100 = 12pt</span>
-                                </li>
-                            </ul>
-                            <ul>
-                                <h5>Points to:</h5>
-                                <li>
-                                    <strong><u>Pixel:</u></strong><br>
-                                    <b>Formula:</b> (pixel per inch / dots per inch) * input value.<br>
-                                    <b>Example:</b> <span>(96px/72px) * 12pt = 16px</span>
-                                </li>
-                                <li>
-                                    <strong><u>EM's</u></strong><br>
-                                    <b>Formula:</b> ((pixel per inch / dots per inch) * input value) / pixel base. <br>
-                                    <b>Example:</b> <span>((96px/72px) * 12pt) / 16px = 1em</span>
-                                </li>
-                                <li>
-                                    <strong><u>Percent %</u></strong><br>
-                                    <b>Formula:</b> ((pixel per inch / dots per inch) * input value) / pixel base * 100. <br>
-                                    <b>Example:</b> <span>((96px/72px) * 12pt) / 16px * 100 = 100%</span>
-                                </li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
+                    </ul>
+                    <ul>
+                        <h5>EM's to:</h5>
+                        <li>
+                            <strong><u>Pixel:</u></strong><br>
+                            <b>Formula:</b> input value * pixel base.<br>
+                            <b>Example:</b> <span>1em * 16px = 16px</span>
+                        </li>
+                        <li>
+                            <strong><u>Percent %:</u></strong><br>
+                            <b>Formula:</b> input value * 100.<br>
+                            <b>Example:</b> <span>1em * 100% = 100%</span>
+                        </li>
+                        <li>
+                            <strong><u>Points:</u></strong><br>
+                            <b>Formula:</b> (dots per inch / pixel per inch) / input value * pixel base.<br>
+                            <b>Example:</b> <span>(72px/96px) / 1em * 16px = 12pt</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <h5>Percent to:</h5>
+                        <li>
+                            <strong><u>Pixel:</u></strong><br>
+                            <b>Formula:</b> (input value * pixel base) / 100.<br>
+                            <b>Example:</b> <span>(100% * 16px) / 100 = 16px</span>
+                        </li>
+                        <li>
+                            <strong><u>EM's:</u></strong><br>
+                            <b>Formula:</b> input value / 100.<br>
+                            <b>Example:</b> <span>100% / 100 = 1em</span>
+                        </li>
+                        <li>
+                            <strong><u>Points:</u></strong><br>
+                            <b>Formula:</b> ((dots per inch / pixel per inch) * input value) * pixel base / 100.<br>
+                            <b>Example:</b> <span>((72px/96px) * 100%) * 16px / 100 = 12pt</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <h5>Points to:</h5>
+                        <li>
+                            <strong><u>Pixel:</u></strong><br>
+                            <b>Formula:</b> (pixel per inch / dots per inch) * input value.<br>
+                            <b>Example:</b> <span>(96px/72px) * 12pt = 16px</span>
+                        </li>
+                        <li>
+                            <strong><u>EM's</u></strong><br>
+                            <b>Formula:</b> ((pixel per inch / dots per inch) * input value) / pixel base. <br>
+                            <b>Example:</b> <span>((96px/72px) * 12pt) / 16px = 1em</span>
+                        </li>
+                        <li>
+                            <strong><u>Percent %</u></strong><br>
+                            <b>Formula:</b> ((pixel per inch / dots per inch) * input value) / pixel base * 100. <br>
+                            <b>Example:</b> <span>((96px/72px) * 12pt) / 16px * 100 = 100%</span>
+                        </li>
+                    </ul>
+                </section>
             </div>
-        </main>
-
-        <script type="text/javascript" src="assets/vendor/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/vendor/materialize/js/materialize.min.js"></script>
-        <script type="text/javascript" src="assets/vendor/waves/js/waves.min.js"></script>
-        <script type="text/javascript" src="assets/js/app.js"></script>
-    </body>
-</html>
+        </div>
+    </div>
+</main>
