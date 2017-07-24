@@ -1,0 +1,30 @@
+# Build settings
+exclude: []
+highlighter: rouge
+markdown: kramdown
+
+# Google Analytics
+google__analytics:
+  tracking-id: 
+
+
+collections:
+  docs:
+    output: true
+
+# Site Settings
+title: Pixel to EM
+description: 
+
+safe: false
+
+baseurl: ""
+url: "https://fcschmidt.me/pixel-to-em"
+ 
+ 
+gems:
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore

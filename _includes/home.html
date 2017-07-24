@@ -1,0 +1,54 @@
+
+<div id="index" class="content">
+    <div class="row">
+        <form name="" method="post" action="post" class="col s12">
+            <div class="input-field col s12">
+                <select id="convertOptions">
+                    <option value="default" disabled selected>Select the option</option>
+                    <optgroup label="Pixel to:">
+                        <option value="0">pixel to em</option>
+                        <option value="1">pixel to porcentagem</option>
+                        <option value="2">pixel to points</option>
+                    </optgroup>
+                    <optgroup label="Em to:">
+                        <option value="3">em to pixel</option>
+                        <option value="4">em to porcentagem</option>
+                        <option value="5">em to points</option>
+                    </optgroup>
+                    <optgroup label="Percent to:">
+                        <option value="6">percent to pixel</option>
+                        <option value="7">percent to em</option>
+                        <option value="8">percent to points</option>
+                    </optgroup>
+                    <optgroup label="Points to:">
+                        <option value="9">points to pixel</option>
+                        <option value="10">points to em</option>
+                        <option value="11">points to porcentagem</option>
+                    </optgroup>
+                </select>
+                <label>Select the type of conversion</label>
+            </div>
+
+            <div class="input-field col s6">
+                <input placeholder="Pixel base" id="pixelBase" type="number"  value="16" class="validate">
+                <label for="pixelBase">Enter a base pixel size</label>
+            </div> 
+            <div class="input-field col s6">
+                <input placeholder="Enter the value" id="inputValue" type="number" class="validate">
+                <label id="vtest" for="inputValue">Enter the value</label> 
+            </div>
+        </form>
+        <button type="button" id="convertButton" class="btn waves-effect waves-classic col s10 push-s1">Convert</button>
+            <div id="error" class="col s12"></div> 
+        <ul class="result col s12" >
+            <li>
+                <span>Input</span><br>
+                <span id="input"></span>
+            </li>
+            <li>
+                <span>Output</span><br>
+                <span id="result"></span>
+            </li>
+        </ul>
+    </div>
+</div>

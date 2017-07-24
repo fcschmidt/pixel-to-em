@@ -1,5 +1,3 @@
 .idea/
 .vscode/
-assets/js/sw.js
-assets/js/teste.js
-testes.html
+_site/
