@@ -15,6 +15,7 @@ collections:
 # Site Settings
 title: Pixel to EM
 description: 
+author: "https://twitter.com/fschimidt"
 
 safe: false
 
