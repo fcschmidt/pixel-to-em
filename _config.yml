@@ -1,5 +1,11 @@
+# Site Settings
+title: Pixel to EM
+description: ""
+author: "https://twitter.com/fschimidt"
+baseurl: ""
+url: "http://fcschmidt.me/pixel-to-em"
+
 # Build settings
-exclude: []
 highlighter: rouge
 markdown: kramdown
 
@@ -7,22 +13,6 @@ markdown: kramdown
 google__analytics:
   tracking-id: 
 
-
-collections:
-  docs:
-    output: true
-
-# Site Settings
-title: Pixel to EM
-description: 
-author: "https://twitter.com/fschimidt"
-
-safe: false
-
-baseurl: ""
-url: "https://fcschmidt.me/pixel-to-em"
- 
- 
 gems:
 exclude:
   - Gemfile
