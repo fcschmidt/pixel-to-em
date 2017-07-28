@@ -31,8 +31,8 @@ self.addEventListener('fetch', function(event) {
                 console.log(
                     '[fetch] Returning from Service Worker cache: ',
                     event.request.url
-            );
-            return response;
+                );
+                return response;
             }
 
             // IMPORTANT: Clone the request. A request is a stream and
@@ -42,25 +42,25 @@ self.addEventListener('fetch', function(event) {
             var fetchRequest = event.request.clone();
 
             return fetch(fetchRequest).then(
-            function(response) {
-                // Check if we received a valid response
-                if(!response || response.status !== 200 || response.type !== 'basic') {
-                return response;
+                
+                function(response) {
+                    // Check if we received a valid response
+                    if(!response || response.status !== 200 || response.type !== 'basic') {
+                        return response;
+                    }
+
+                    // IMPORTANT: Clone the response. A response is a stream
+                    // and because we want the browser to consume the response
+                    // as well as the cache consuming the response, we need
+                    // to clone it so we have two streams.
+                    var responseToCache = response.clone();
+
+                    caches.open(CACHE_NAME)
+                    .then(function(cache) {
+                        cache.put(event.request, responseToCache);
+                    });
+                    return response;
                 }
-
-                // IMPORTANT: Clone the response. A response is a stream
-                // and because we want the browser to consume the response
-                // as well as the cache consuming the response, we need
-                // to clone it so we have two streams.
-                var responseToCache = response.clone();
-
-                caches.open(CACHE_NAME)
-                .then(function(cache) {
-                    cache.put(event.request, responseToCache);
-                });
-
-                return response;
-            }
             );
         })
     );
