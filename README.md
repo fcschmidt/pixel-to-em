@@ -2,13 +2,13 @@
 
 ## About the App
 
-**Pixel to EM** is an [Offline Web Application](http://), which is used to calculate (convert) values from one source to another. For example: convert a pixel value to in points, or percent to in pixel.
-This app is an exeperiment study on [Progressive Web App (PWA)](http://).
+**Pixel to EM** is an [Offline Web Application](https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/offline-for-pwa?hl=pt-br), which is used to calculate (convert) values from one source to another. For example: convert a pixel value to in points, or percent to in pixel.
+This app is an exeperiment study on [Progressive Web App (PWA)](https://developers.google.com/web/progressive-web-apps/).
 
 
 ## Install App
 
-See how to install the app in [pixel install](http://).
+See how to install the app in [pixel install](https://pixel.fcschmidt.me/install-app.html).
 
 ## Calculation Method (convert values)
 Conversions based on **16px** browser default size value.
@@ -90,7 +90,7 @@ Conversions based on **16px** browser default size value.
 Site is built with Jekyll (requires Ruby and more). Install Jekyll and run a local server to view your changes:
 
 **Install Jekyll:**
-Instalation guide [jekyll](http://).
+Instalation guide [jekyll](https://jekyllrb.com/docs/installation/).
 
 **Start locallhost server:**
 `$ jekyll serve --watch`
