@@ -1,7 +1,5 @@
 # Font Converter Offline Web Application [PWA Experiment]
 
-## About the App
-
 **Pixel to EM** is an [Offline Web Application](https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/offline-for-pwa?hl=pt-br), which is used to calculate (convert) values from one source to another. For example: convert a pixel value to in points, or percent to in pixel.
 This app is an exeperiment study on [Progressive Web App (PWA)](https://developers.google.com/web/progressive-web-apps/).
 
