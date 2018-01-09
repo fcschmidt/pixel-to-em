@@ -3,9 +3,9 @@
 */
 @font-face {
   font-family: "Material Icons";
-  src: local('materialize'),
+  src: local('assets'),
        local('icons'),
-       url("MaterialIcons-Regular.ttf");
+       url("../icons/MaterialIcons-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }

@@ -1,9 +1,10 @@
 # Site Settings
 title: Pixel to EM
+app-name: "Pixel to EM"
 description: ""
-author: "https://twitter.com/fschimidt"
+author: "https://twitter.com/fcschimidt"
 baseurl: ""
-url: "https://pixel.fcschmidt.me"
+url: "https://fcschmidt.me/pixel-to-em/"
 
 # Build settings
 highlighter: rouge

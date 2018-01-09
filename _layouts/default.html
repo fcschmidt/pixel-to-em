@@ -3,6 +3,8 @@
     {% include head.html %}
     <body>
         {{ content }}
+        {% if page.config != "install" %}
         {% include scripts.html %}
+        {% endif %}
     </body>
 </html>
