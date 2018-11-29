@@ -12,75 +12,37 @@ See how to install the app in [pixel install](https://pixel.fcschmidt.me/install
 Conversions based on **16px** browser default size value.
 
 ### Pixel to:
-
-##### EM:
-
-- **Formula:** input value / pixel base.
-- **Example:** `16px / 16px = 1em`
-
-##### Percent %:
-
-- **Formula:** (input value / pixel base) * 100
-- **Example:** `(16px/16px ) * 100 = 100%`
-
-##### Points:
-
-- **Formula:** input value * (dots per inch / pixel per inch)
-- **Example:** `16px * (72px/96px) = 12pt`
+Pixel to|Formula|Example
+:--|--|--
+**EM**|input value / pixel base|`16px / 16px = 1em`
+**Percent**|(input value / pixel base) * 100| `(16px/16px ) * 100 = 100%`
+**Points**|input value * (dots per inch / pixel per inch)|`16px * (72px/96px) = 12pt`
 
 
 ### EM to:
-
-##### Pixel:
-
-- **Formula:** input value * pixel base
-- **Example:** `1em * 16px = 16px`
-
-##### Percent:
-
-- **Formula:** input value * 100
-- **Example:** `1em * 100% = 100%`
-
-##### Points:
-
-- **Formula:** (dots per inch / pixel per inch) / input value * pixel base
-- **Example:** `(72px/96px) / 1em * 16px = 12pt`
+EM to|Formula|Example
+:--|--|--
+**Pixel**|input value * pixel base|`1em * 16px = 16px`
+**Percent**|input value * 100|`1em * 100% = 100%`
+**Points**|(dots per inch / pixel per inch) / input value * pixel base|`(72px/96px) / 1em * 16px = 12pt`
 
 
 ### Percent to:
-
-##### Pixel:
-
-- **Formula:** (input value * pixel base) / 100
-- **Example:** `(100% * 16px) / 100 = 16px`
-
-##### EM:
-
-- **Formula:** input value / 100
-- **Example:** `100% / 100 = 1em`
-
-##### Points:
-
-- **Formula:** ((dots per inch / pixel per inch) * input value) * pixel base / 100
-- **Example:** `((72px/96px) * 100%) * 16px / 100 = 12pt`
+Percent to|Formula|Example
+:--|--|--
+**Pixel**|(input value * pixel base) / 100|`(100% * 16px) / 100 = 16px`
+**EM**|input value / 100|`100% / 100 = 1em`
+**Points**|((dots per inch / pixel per inch) * input value) * pixel base / 100|`((72px/96px) * 100%) * 16px / 100 = 12pt`
 
 
 ### Points to:
+Points to|Formula|Example
+:--|--|--
+**Pixel**|(pixel per inch / dots per inch) * input value|`(96px/72px) * 12pt = 16px`
+**EM**|((pixel per inch / dots per inch) * input value) / pixel base|`((96px/72px) * 12pt) / 16px = 1em`
+**Percent**| ((pixel per inch / dots per inch) ***** input value) / pixel base * 100|`((96px/72px) * 12pt) / 16px * 100 = 100%`
 
-##### Pixel:
 
-- **Formula:** (pixel per inch / dots per inch) * input value
-- **Example:** `(96px/72px) * 12pt = 16px`
-
-##### EM:
-
-- **Formula:** ((pixel per inch / dots per inch) * input value) / pixel base
-- **Example:** `((96px/72px) * 12pt) / 16px = 1em`
-
-##### Percent:
-
-- **Formula:** ((pixel per inch / dots per inch) ***** input value) / pixel base * 100
-- **Example:** `((96px/72px) * 12pt) / 16px * 100 = 100%`
 ****
 
 
