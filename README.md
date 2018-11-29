@@ -40,7 +40,7 @@ Points to|Formula|Example
 :--|--|--
 **Pixel**|(pixel per inch / dots per inch) * input value|`(96px/72px) * 12pt = 16px`
 **EM**|((pixel per inch / dots per inch) * input value) / pixel base|`((96px/72px) * 12pt) / 16px = 1em`
-**Percent**| ((pixel per inch / dots per inch) ***** input value) / pixel base * 100|`((96px/72px) * 12pt) / 16px * 100 = 100%`
+**Percent**| ((pixel per inch / dots per inch) * input value) / pixel base * 100|`((96px/72px) * 12pt) / 16px * 100 = 100%`
 
 
 ****
