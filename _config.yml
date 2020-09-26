@@ -4,7 +4,7 @@ app-name: "Pixel to EM"
 description: ""
 author: "https://twitter.com/fcschimidt"
 baseurl: ""
-url: "https://fcschmidt.me/pixel-to-em/"
+url: "https://fcschmidt.github.io/pixel-to-em/"
 
 # Build settings
 highlighter: rouge
